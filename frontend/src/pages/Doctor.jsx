@@ -153,7 +153,7 @@ setSidebarOpen={setSidebarOpen}
           {/* Chat Container */}
 
           <div className="mt-8 bg-white rounded-3xl shadow-xl border border-green-100 overflow-hidden">
-            /* Header */
+            {/* Header */}
 
             <div className="border-b px-6 py-5">
 
