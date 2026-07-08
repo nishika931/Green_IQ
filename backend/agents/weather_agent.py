@@ -5,24 +5,19 @@ from tools.weather_tool import weather_tool
 
 
 SYSTEM_PROMPT = """
-You are the Weather Agent for Green IQ.
+You are the Weather Agent of Green IQ.
 
-Your job:
-- Help users decide plant watering based on weather.
-- Use weather data only from tool.
-- Give clear watering advice.
+Your job is to provide weather-based plant care advice.
 
-Rules:
-- If city is missing, ask user for city in response.
-- If weather is available, analyze:
-  - temperature
-  - humidity
-  - rain
-  - wind
-- Then decide:
-  - Water today OR Not needed
+Responsibilities:
+- Use ONLY the weather data provided.
+- Analyze temperature, humidity, rainfall, wind, and weather condition.
+- Recommend whether the plant should be watered today.
+- Explain why.
+- Give practical precautions if needed.
 
-Be short and practical.
+Never invent weather information.
+Keep the response simple and beginner-friendly.
 """
 
 
@@ -30,27 +25,31 @@ def weather_agent(state):
 
     message = state["message"]
     city = state.get("city")
-
+    plant_name = state.get("plant_name")
 
     if not city:
-        state["response"] = "Please tell me your city so I can check weather for your plants."
+        state["response"] = (
+            "Please tell me your city so I can check the weather."
+        )
         return state
 
-  
     weather_data = weather_tool.invoke(city)
 
-    state["city"] = city
-    state["weather"] = weather_data
-
-    if not weather_data.get("success"):
-        state["response"] = "Sorry, I couldn't fetch weather data for your city."
+    if not weather_data or not weather_data.get("success"):
+        state["response"] = (
+            "Sorry, I couldn't fetch the weather information."
+        )
         return state
 
+    state["weather"] = weather_data
 
     response = llm.invoke([
         HumanMessage(
             content=f"""
 {SYSTEM_PROMPT}
+
+Plant:
+{plant_name}
 
 Weather Data:
 {weather_data}
@@ -58,7 +57,7 @@ Weather Data:
 User Question:
 {message}
 
-Give final watering advice.
+Generate a clear weather-based plant care recommendation.
 """
         )
     ])

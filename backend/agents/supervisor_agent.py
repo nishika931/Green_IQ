@@ -2,18 +2,50 @@ from langchain_core.messages import HumanMessage
 from config.llm import llm
 
 SUPERVISOR_PROMPT = """
-You are a routing agent for Green IQ.
+You are the Supervisor Agent of Green IQ.
 
-Classify the user query into ONLY ONE category:
+Your job is to decide which AI agent should answer.
 
-1. doctor → plant disease, plant health, watering, pests, yellow leaves, etc.
-2. search → plant name lookup, plant information, species details.
+Return ONLY ONE WORD.
 
-Rules:
-- Return ONLY one word.
-- No explanation.
-- No punctuation.
-- Only: doctor OR search
+doctor
+plant
+weather
+general
+
+Rules
+
+doctor
+- diseases
+- pests
+- yellow leaves
+- brown leaves
+- fungus
+- overwatering
+- underwatering
+
+plant
+- plant information
+- scientific name
+- family
+- watering requirements
+- sunlight
+- care guide
+
+weather
+- weather
+- rain
+- temperature
+- humidity
+- watering today
+- climate
+
+general
+- greetings
+- thank you
+- gardening tips
+- casual plant conversation
+- anything that doesn't require APIs
 """
 
 

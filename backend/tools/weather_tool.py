@@ -15,4 +15,19 @@ def weather_tool(city: str) -> dict:
         Dictionary containing weather information.
     """
 
-    return get_weather(city)
+    try:
+        weather = get_weather(city)
+
+        if not weather:
+            return {
+                "success": False,
+                "message": "Weather data not found."
+            }
+
+        return weather
+
+    except Exception as e:
+        return {
+            "success": False,
+            "message": f"Weather service error: {str(e)}"
+        }
