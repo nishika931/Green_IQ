@@ -189,37 +189,77 @@ JWT_SECRET_KEY=your_secret
 
 ---
 
-# AI Workflow
+                         🌿 Green IQ - Multi-Agent Chat Workflow
 
-```
-User Question
-      │
-      ▼
-Supervisor Agent
-      │
-      ▼
-───────────────
-│        │          
-▼        ▼          
-Plant   Disease   
-Agent    Agent     
-│
-▼
-Weather API
-│
-▼
-Plant Database
-│
-▼
-Groq LLM
-│
-▼
-AI Response
-│
-▼
-Save Chat History
-```
-
+                                ┌──────────────────┐
+                                │      User        │
+                                │ Types a Question │
+                                └────────┬─────────┘
+                                         │
+                                         ▼
+                              ┌────────────────────┐
+                              │ React Frontend     │
+                              │ (Doctor Chat Page) │
+                              └────────┬───────────┘
+                                       │
+                                       ▼
+                           ┌────────────────────────┐
+                           │ POST /chat             │
+                           │ FastAPI Backend        │
+                           └────────┬───────────────┘
+                                    │
+                                    ▼
+                         ┌──────────────────────────┐
+                         │ Create Agent State       │
+                         │ • message                │
+                         │ • city                   │
+                         │ • user_id                │
+                         └────────┬─────────────────┘
+                                  │
+                                  ▼
+                       ┌────────────────────────────┐
+                       │ Supervisor Agent           │
+                       │ Detect User Intent         │
+                       └────────┬───────────────────┘
+                                │
+      ┌─────────────────────────┼───────────────────────────┬─────────────────────────┐
+      │                         │                           │                         │
+      ▼                         ▼                           ▼                         ▼
+ Plant Information        Plant Disease              Weather Query            General Query
+     (plant)                (doctor)                  (weather)                (general)
+      │                         │                           │                         │
+      ▼                         ▼                           ▼                         ▼
+┌───────────────┐      ┌────────────────┐        ┌────────────────┐        ┌────────────────┐
+│ Plant Agent   │      │ Doctor Agent   │        │ Weather Agent  │        │ General Agent  │
+│ Perenual API  │      │ LLM Diagnosis  │        │ Weather API    │        │ LLM Response   │
+└──────┬────────┘      └──────┬─────────┘        └──────┬─────────┘        └──────┬─────────┘
+       │                      │                         │                         │
+       └──────────────────────┴───────────────┬─────────┴─────────────────────────┘
+                                              │
+                                              ▼
+                                  ┌────────────────────────┐
+                                  │ AI Response Generated  │
+                                  └──────────┬─────────────┘
+                                             │
+                                             ▼
+                               ┌────────────────────────────┐
+                               │ Save Chat History          │
+                               │ • User Message             │
+                               │ • AI Response              │
+                               │ PostgreSQL Database        │
+                               └──────────┬─────────────────┘
+                                          │
+                                          ▼
+                               ┌────────────────────────────┐
+                               │ Return JSON Response       │
+                               │ to React Frontend          │
+                               └──────────┬─────────────────┘
+                                          │
+                                          ▼
+                                 ┌─────────────────┐
+                                 │ Display Answer  │
+                                 │ to the User     │
+                                 └─────────────────┘
 ---
 
 # Database
