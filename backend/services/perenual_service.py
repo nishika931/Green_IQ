@@ -50,10 +50,6 @@ def search_plant(plant_name: str):
         return None
 
 
-
-# -----------------------------
-# GET COMPLETE PLANT DETAILS
-# -----------------------------
 def get_plant_details(plant_id: int):
 
     try:

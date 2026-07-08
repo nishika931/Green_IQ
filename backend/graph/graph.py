@@ -20,7 +20,7 @@ def build_graph():
     # Nodes
     workflow.add_node("supervisor", supervisor_agent)
     workflow.add_node("doctor", doctor_agent)
-    workflow.add_node("search", plant_detail_agent)
+    workflow.add_node("plant", plant_detail_agent)
     workflow.add_node("weather", weather_agent)
     workflow.add_node("general", general_agent)
 
@@ -33,7 +33,7 @@ def build_graph():
         route,
         {
             "doctor": "doctor",
-            "search": "search",
+            "plant": "plant",
             "weather": "weather",
             "general": "general"
         }
@@ -41,7 +41,7 @@ def build_graph():
 
     # End nodes
     workflow.add_edge("doctor", END)
-    workflow.add_edge("search", END)
+    workflow.add_edge("plant", END)
     workflow.add_edge("weather", END)
     workflow.add_edge("general", END)
 
