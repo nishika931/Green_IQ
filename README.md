@@ -189,37 +189,39 @@ JWT_SECRET_KEY=your_secret
 
 ---
 
-                         🌿 Green IQ - Multi-Agent Chat Workflow
+ ```mermaid
+flowchart TD
 
-                 +------------------+
-                 |   User Query     |
-                 +--------+---------+
-                          |
-                          v
-               +----------------------+
-               |  Supervisor Agent    |
-               +----+----+----+-------+
-                    |    |    | 
-        +-----------+    |    +-------------+
-        |                |                  |
-        v                v                  v
-+---------------+  +--------------+  +---------------+
-| Doctor Agent  |  | Plant Agent  |  | Weather Agent |
-+-------+-------+  +------+-------+  +-------+-------+
-        |                 |                  |
-        |         Perenual API               |
-        |                 |                  |
-        +-----------------+------------------+
-                          |
-                          v
-                  +---------------+
-                  | General Agent |
-                  +-------+-------+
-                          |
-                          v
-                 +------------------+
-                 | Final Response   |
-                 +------------------+
+    A(User sends a plant-related query)
+    A --> B(Chat API)
+    B --> C(LangGraph Workflow)
+
+    C --> D(Supervisor Agent)
+
+    D -->|Plant diseases, pests, yellow leaves| E(Doctor Agent)
+    D -->|Plant information, care, species| F(Plant Detail Agent)
+    D -->|Weather, watering, climate| G(Weather Agent)
+    D -->|Greetings, gardening tips, casual chat| H(General Agent)
+
+    F --> I(Perenual Tool)
+    I --> J(Perenual API)
+    J --> F
+
+    G --> K(Weather Tool)
+    K --> L(OpenWeather API)
+    L --> G
+
+    E --> M(Groq LLM)
+    F --> M
+    G --> M
+    H --> M
+
+    M --> N(Generate Final Response)
+
+    N --> O(Store Chat History in PostgreSQL)
+
+    O --> P(Return Response to Frontend)
+```
 ---
 
 # Database
