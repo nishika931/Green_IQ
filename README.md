@@ -192,35 +192,24 @@ JWT_SECRET_KEY=your_secret
  ```mermaid
 flowchart TD
 
-    A(User sends a plant-related query)
-    A --> B(Chat API)
-    B --> C(LangGraph Workflow)
+    A[🌿 User Query] --> B[Supervisor Agent]
 
-    C --> D(Supervisor Agent)
+    B -->|Disease / Pests| C[Doctor Agent]
+    B -->|Plant Details| D[Plant Agent]
+    B -->|Weather Query| E[Weather Agent]
+    B -->|General Chat| F[General Agent]
 
-    D -->|Plant diseases, pests, yellow leaves| E(Doctor Agent)
-    D -->|Plant information, care, species| F(Plant Detail Agent)
-    D -->|Weather, watering, climate| G(Weather Agent)
-    D -->|Greetings, gardening tips, casual chat| H(General Agent)
+    D --> G[Perenual API]
+    E --> H[Weather API]
 
-    F --> I(Perenual Tool)
-    I --> J(Perenual API)
-    J --> F
+    G --> I[Final Response]
+    H --> I
+    C --> I
+    F --> I
 
-    G --> K(Weather Tool)
-    K --> L(OpenWeather API)
-    L --> G
-
-    E --> M(Groq LLM)
-    F --> M
-    G --> M
-    H --> M
-
-    M --> N(Generate Final Response)
-
-    N --> O(Store Chat History in PostgreSQL)
-
-    O --> P(Return Response to Frontend)
+    I --> J[Store Chat History]
+    J --> K[Return Response to User]
+```
 ```
 ---
 
