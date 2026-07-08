@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Sidebar from "../components/Sidebar";
+import Sidebar from "../components/SideBar";
 import Navbar from "../components/Navbar";
 import API from "../services/api";
 
