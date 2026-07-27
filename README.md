@@ -244,8 +244,8 @@ Stores:
 
 ---
 
-## Live Demo
-https://green-iq-bice.vercel.app/
+## 🚀 Live Demo
+🔗 https://green-iq-bice.vercel.app/
 
 # Author
 
