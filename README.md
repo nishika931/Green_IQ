@@ -189,37 +189,28 @@ JWT_SECRET_KEY=your_secret
 
 ---
 
-# AI Workflow
+ ```mermaid
+flowchart TD
 
-```
-User Question
-      │
-      ▼
-Supervisor Agent
-      │
-      ▼
-───────────────
-│        │          
-▼        ▼          
-Plant   Disease   
-Agent    Agent     
-│
-▼
-Weather API
-│
-▼
-Plant Database
-│
-▼
-Groq LLM
-│
-▼
-AI Response
-│
-▼
-Save Chat History
-```
+    A[🌿 User Query] --> B[Supervisor Agent]
 
+    B -->|Disease / Pests| C[Doctor Agent]
+    B -->|Plant Details| D[Plant Agent]
+    B -->|Weather Query| E[Weather Agent]
+    B -->|General Chat| F[General Agent]
+
+    D --> G[Perenual API]
+    E --> H[Weather API]
+
+    G --> I[Final Response]
+    H --> I
+    C --> I
+    F --> I
+
+    I --> J[Store Chat History]
+    J --> K[Return Response to User]
+```
+```
 ---
 
 # Database
@@ -253,7 +244,8 @@ Stores:
 
 ---
 
-Live Link :- https://green-iq-bice.vercel.app/
+## 🚀 Live Demo
+🔗 https://green-iq-bice.vercel.app/
 
 # Author
 
