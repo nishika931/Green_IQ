@@ -29,49 +29,47 @@ export default function Doctor() {
   "🌿 Brown spots on leaves"
 ];
 
-  const sendMessage = async () => {
+ const sendMessage = async () => {
+  if (!message.trim()) return;
 
-    if (!message.trim()) return;
-
-    const userMessage = {
-      role: "user",
-      message
-    };
-
-    setMessages((prev) => [...prev, userMessage]);
-
-    setLoading(true);
-
-    try {
-
-      const res = await API.post("/chat", {
-        message,
-        city
-      });
-
-      setMessages((prev) => [
-        ...prev,
-        {
-          role: "assistant",
-          message: res.data.response
-        }
-      ]);
-
-      setMessage("");
-
-    } catch (err) {
-
-  console.log("CHAT ERROR:", err.response);
-
-  setError(
-    err.response?.data?.detail ||
-    "Unable to contact Plant Doctor. Please try again."
-  );
-
-}
-    setLoading(false);
-
+  const userMessage = {
+    role: "user",
+    message: message,
   };
+
+  setMessages((prev) => [...prev, userMessage]);
+  setLoading(true);
+  setError("");
+
+  try {
+    const res = await API.post("/chat/", {
+      message: message,
+      city: city,
+    });
+
+    setMessages((prev) => [
+      ...prev,
+      {
+        role: "assistant",
+        message: res.data.response,
+      },
+    ]);
+
+    setMessage("");
+  } catch (err) {
+    console.error("CHAT ERROR:", err);
+    console.error("Backend response:", err.response?.data);
+    console.error("Status:", err.response?.status);
+
+    setError(
+      err.response?.data?.detail ||
+        err.message ||
+        "Unable to contact Plant Doctor. Please try again."
+    );
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
 
