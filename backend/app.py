@@ -3,10 +3,6 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from config.database import Base, engine
 
-from models.user import User
-from models.plant import Plant
-from models.chat import Chat
-
 # Routes
 from routes.auth_routes import router as auth_router
 from routes.plant_routes import router as plant_router

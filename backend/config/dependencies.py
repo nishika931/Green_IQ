@@ -11,9 +11,6 @@ security = HTTPBearer()
 
 
 def get_db():
-    """
-    Database session dependency
-    """
     db = SessionLocal()
     try:
         yield db
@@ -21,13 +18,7 @@ def get_db():
         db.close()
 
 
-def get_current_user(
-    credentials: HTTPAuthorizationCredentials = Depends(security),
-    db: Session = Depends(get_db)
-):
-    """
-    Returns the currently logged-in user
-    """
+def get_current_user(credentials: HTTPAuthorizationCredentials = Depends(security),db: Session = Depends(get_db)):
 
     token = credentials.credentials
 

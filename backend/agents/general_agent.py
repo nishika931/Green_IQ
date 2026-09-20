@@ -22,16 +22,7 @@ def general_agent(state):
 
     message = state["message"]
 
-    response = llm.invoke([
-        HumanMessage(
-            content=f"""
-{SYSTEM_PROMPT}
-
-User Message:
-{message}
-"""
-        )
-    ])
+    response = llm.invoke([HumanMessage(content=f"""{SYSTEM_PROMPT}User Message:{message}""")])
 
     state["response"] = response.content
 

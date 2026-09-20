@@ -13,21 +13,12 @@ router = APIRouter(
 
 
 @router.get("/")
-def get_plants(
-    db: Session = Depends(get_db),
-    user=Depends(get_current_user)
-):
-    return db.query(Plant).filter(
-        Plant.user_id == user.id
-    ).all()
+def get_plants(db: Session = Depends(get_db),user=Depends(get_current_user)):
+    return db.query(Plant).filter(Plant.user_id == user.id).all()
 
 
 @router.post("/")
-def add_plant(
-    plant: PlantCreate,
-    db: Session = Depends(get_db),
-    user=Depends(get_current_user)
-):
+def add_plant(plant: PlantCreate,db: Session = Depends(get_db),user=Depends(get_current_user)):
 
     new_plant = Plant(
         user_id=user.id,
@@ -46,11 +37,7 @@ def add_plant(
 
 
 @router.delete("/{plant_id}")
-def delete_plant(
-    plant_id: int,
-    db: Session = Depends(get_db),
-    user=Depends(get_current_user)
-):
+def delete_plant(plant_id: int,db: Session = Depends(get_db),user=Depends(get_current_user)):
 
     plant = db.query(Plant).filter(
         Plant.id == plant_id,

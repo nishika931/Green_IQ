@@ -66,16 +66,7 @@ doctor OR plant OR weather OR general
 def supervisor_agent(state):
     message = state["message"]
 
-    response = llm.invoke([
-        HumanMessage(
-            content=f"""
-{SUPERVISOR_PROMPT}
-
-User message:
-{message}
-"""
-        )
-    ])
+    response = llm.invoke([HumanMessage(content=f"""{SUPERVISOR_PROMPT}User message:{message}""" )])
 
     intent = response.content.strip().lower()
 

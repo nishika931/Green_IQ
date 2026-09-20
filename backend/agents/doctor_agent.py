@@ -59,17 +59,7 @@ def doctor_agent(state):
         weather_data = weather_tool.invoke(city)
 
     response = llm.invoke([
-        HumanMessage(
-            content=f"""
-{SYSTEM_PROMPT}
-
-User Problem:
-{message}
-
-Weather Data:
-{weather_data}
-"""
-        )
+        HumanMessage(content=f"""{SYSTEM_PROMPT} User Problem:{message}Weather Data:{weather_data}""")
     ])
 
     state["response"] = response.content

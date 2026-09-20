@@ -28,10 +28,7 @@ def hash_password(password: str) -> str:
     return pwd_context.hash(password)
 
 
-def verify_password(
-    plain_password: str,
-    hashed_password: str
-) -> bool:
+def verify_password(plain_password: str,hashed_password: str) -> bool:
     """
     Verify user password
     """

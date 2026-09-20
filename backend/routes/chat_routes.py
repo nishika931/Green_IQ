@@ -17,11 +17,7 @@ router = APIRouter(
 
 
 @router.post("/")
-def chat(
-    request: ChatRequest,
-    db: Session = Depends(get_db),
-    user=Depends(get_current_user)
-):
+def chat( request: ChatRequest, db: Session = Depends(get_db), user=Depends(get_current_user)):
 
     state: AgentState = {
         "message": request.message,
