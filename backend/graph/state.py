@@ -12,3 +12,8 @@ class AgentState(TypedDict):
     plant_data: Optional[Any]
 
     user_id: Optional[int]
+
+    context: Optional[str]
+
+    memory: Optional[str]
+

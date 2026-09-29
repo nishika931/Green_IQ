@@ -12,6 +12,8 @@ BASE_URL = "https://perenual.com/api/v2"
 
 REQUEST_TIMEOUT = 10
 
+
+
 def search_plant(plant_name: str):
 
     try:
@@ -29,25 +31,47 @@ def search_plant(plant_name: str):
             timeout=REQUEST_TIMEOUT
         )
 
-
         if response.status_code != 200:
             return None
 
-
         data = response.json()
 
+        plants = data.get("data", [])
 
-        if not data.get("data"):
+        print("SEARCH RESULTS FOR:", plant_name)
+
+        for plant in plants[:10]:
+            print(
+                plant.get("id"),
+                "|",
+                plant.get("common_name")
+            )
+
+        if not plants:
             return None
 
+        search_name = plant_name.strip().lower()
 
-        return data["data"][0]
+        # Exact common-name match only
+        for plant in plants:
 
+            common_name = plant.get(
+                "common_name",
+                ""
+            ).strip().lower()
+
+            if common_name == search_name:
+                return plant
+
+        # No exact match found
+        return None
 
     except Exception as e:
 
         print("Perenual Search Error:", e)
+
         return None
+
 
 
 def get_plant_details(plant_id: int):
@@ -60,37 +84,29 @@ def get_plant_details(plant_id: int):
             "key": PERENUAL_API_KEY
         }
 
-
         response = requests.get(
             url,
             params=params,
             timeout=REQUEST_TIMEOUT
         )
 
-
         if response.status_code != 200:
             return None
 
-
         return response.json()
-
 
     except Exception as e:
 
         print("Perenual Details Error:", e)
+
         return None
 
 
-
-# -----------------------------
-# AI CARE GUIDE
-# -----------------------------
 def generate_ai_care_guide(details):
 
     try:
 
         prompt = f"""
-
 You are Green IQ Plant Care Expert.
 
 Use this real plant data:
@@ -103,7 +119,6 @@ Scientific Name:
 
 Family:
 {details.get("family")}
-
 
 Create a simple plant care guide.
 
@@ -132,19 +147,20 @@ Format:
 ⭐ Care Level:
 
 🐶 Pet Friendly:
-
 """
-
 
         response = llm.invoke(prompt)
 
         return response.content
 
-
     except Exception as e:
 
         return f"Unable to generate care guide: {str(e)}"
 
+
+# -----------------------------
+# COMPLETE PLANT INFORMATION
+# -----------------------------
 
 def get_complete_plant_info(plant_name: str):
 
@@ -155,30 +171,28 @@ def get_complete_plant_info(plant_name: str):
             "message": "Perenual API key missing."
         }
 
+    # -----------------------------------------
+    # Correct common user plant names
+    # -----------------------------------------
 
-    plant = search_plant(plant_name)
+    corrected_name = plant_name.strip().lower()
 
+    corrections = {
+        "rattle snake plant": "rattlesnake plant",
+        "snake plant": "snake plant",
+        "money plants": "money plant"
+    }
 
-    if not plant:
+    corrected_name = corrections.get(
+        corrected_name,
+        corrected_name
+    )
 
-        corrected_name = plant_name.lower()
+    # -----------------------------------------
+    # Search Perenual
+    # -----------------------------------------
 
-        corrections = {
-            "rattle snake plant": "rattlesnake plant",
-            "snake plant": "snake plant",
-            "money plants": "money plant"
-        }
-
-
-        corrected_name = corrections.get(
-            corrected_name,
-            corrected_name
-        )
-
-
-        plant = search_plant(corrected_name)
-
-
+    plant = search_plant(corrected_name)
 
     if not plant:
 
@@ -187,12 +201,13 @@ def get_complete_plant_info(plant_name: str):
             "message": f"Plant '{plant_name}' not found."
         }
 
-
+    # -----------------------------------------
+    # Get detailed plant information
+    # -----------------------------------------
 
     details = get_plant_details(
         plant["id"]
     )
-
 
     if not details:
 
@@ -201,19 +216,20 @@ def get_complete_plant_info(plant_name: str):
             "message": "Unable to fetch plant details."
         }
 
-
+    # -----------------------------------------
+    # Generate AI care guide
+    # -----------------------------------------
 
     ai_guide = generate_ai_care_guide(details)
 
-
+    # -----------------------------------------
+    # Return final plant information
+    # -----------------------------------------
 
     return {
-
         "success": True,
 
-
         "basic_info": {
-
             "id": details.get("id"),
 
             "common_name": details.get(
@@ -229,7 +245,6 @@ def get_complete_plant_info(plant_name: str):
                 "family"
             ),
 
-
             "image": details.get(
                 "default_image",
                 {}
@@ -238,7 +253,5 @@ def get_complete_plant_info(plant_name: str):
             )
         },
 
-
-        "ai_care_guide": ai_guide
-
+        "ai_care_guide": ai_care_guide
     }

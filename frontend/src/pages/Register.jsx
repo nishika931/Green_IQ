@@ -17,7 +17,6 @@ export default function Register() {
 
   const submit = async () => {
 
-    // Frontend validation
     if (!username.trim()) {
       setError("Please enter your username");
       return;
