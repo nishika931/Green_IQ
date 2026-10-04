@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "https://green-iq-wi2s.onrender.com",
+  baseURL: "https://green-iq-b5xg.onrender.com",
 });
 
 API.interceptors.request.use((config) => {
