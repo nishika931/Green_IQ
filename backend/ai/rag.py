@@ -1,3 +1,6 @@
+from ai.vector_db import get_vector_db
+
+
 def retrieve_context(query: str, k: int = 2):
     vector_db = get_vector_db()
 
