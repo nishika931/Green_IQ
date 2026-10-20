@@ -11,32 +11,24 @@ from agents.weather_agent import weather_agent
 from ai.rag import retrieve_context
 
 
+
+
 def prepare_context(state: AgentState):
-
     memory = state.get("memory", "")
+    message = state["message"]
 
-    rag_query = f"""
-Previous conversation:
-{memory}
+    context = retrieve_context(message, k=2)
 
-Current question:
-{state["message"]}
-
-Retrieve information specifically relevant to the plant
-mentioned in the current question. Prefer plant-specific
-knowledge over general knowledge or information about other
-plants.
-"""
-
-    context = retrieve_context(
-        rag_query,
-        k=2
-    )
+    print("\n===== FINAL RAG CONTEXT =====")
+    print(context)
+    print("=============================\n")
 
     return {
         "memory": memory,
         "context": context
     }
+
+
 
 
 def route(state: AgentState):

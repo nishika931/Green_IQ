@@ -52,7 +52,6 @@ def search_plant(plant_name: str):
 
         search_name = plant_name.strip().lower()
 
-        # Exact common-name match only
         for plant in plants:
 
             common_name = plant.get(
@@ -63,7 +62,6 @@ def search_plant(plant_name: str):
             if common_name == search_name:
                 return plant
 
-        # No exact match found
         return None
 
     except Exception as e:
@@ -158,10 +156,6 @@ Format:
         return f"Unable to generate care guide: {str(e)}"
 
 
-# -----------------------------
-# COMPLETE PLANT INFORMATION
-# -----------------------------
-
 def get_complete_plant_info(plant_name: str):
 
     if not PERENUAL_API_KEY:
@@ -171,9 +165,6 @@ def get_complete_plant_info(plant_name: str):
             "message": "Perenual API key missing."
         }
 
-    # -----------------------------------------
-    # Correct common user plant names
-    # -----------------------------------------
 
     corrected_name = plant_name.strip().lower()
 
@@ -188,9 +179,6 @@ def get_complete_plant_info(plant_name: str):
         corrected_name
     )
 
-    # -----------------------------------------
-    # Search Perenual
-    # -----------------------------------------
 
     plant = search_plant(corrected_name)
 
@@ -200,10 +188,6 @@ def get_complete_plant_info(plant_name: str):
             "success": False,
             "message": f"Plant '{plant_name}' not found."
         }
-
-    # -----------------------------------------
-    # Get detailed plant information
-    # -----------------------------------------
 
     details = get_plant_details(
         plant["id"]
@@ -216,15 +200,9 @@ def get_complete_plant_info(plant_name: str):
             "message": "Unable to fetch plant details."
         }
 
-    # -----------------------------------------
-    # Generate AI care guide
-    # -----------------------------------------
 
     ai_guide = generate_ai_care_guide(details)
 
-    # -----------------------------------------
-    # Return final plant information
-    # -----------------------------------------
 
     return {
         "success": True,

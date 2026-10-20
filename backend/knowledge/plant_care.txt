@@ -1,90 +1,110 @@
-ROSE PLANT CARE
+# GREEN IQ PLANT CARE KNOWLEDGE BASE
 
-Roses need well-draining soil and generally prefer several hours
-of sunlight each day.
+## ROSE PLANT CARE
 
-Watering should depend on soil moisture, temperature, humidity,
-rainfall, and the plant's environment.
+### Soil and Drainage
+Roses grow best in fertile, well-draining soil. Good drainage allows excess water to escape and helps prevent waterlogged soil. Soil that remains wet for long periods can contribute to root problems.
 
-Avoid keeping the soil constantly waterlogged.
+### Sunlight
+Roses generally benefit from several hours of direct sunlight each day. Their sunlight needs can vary depending on the rose variety, climate, and growing conditions.
 
-Yellow leaves can be caused by overwatering, poor drainage,
-insufficient nutrients, pests, or environmental stress.
+### Watering
+Rose watering needs depend on soil moisture, temperature, humidity, rainfall, sunlight, and the plant's growing environment. Check soil moisture before watering instead of relying only on a fixed schedule. Avoid keeping the soil constantly waterlogged.
 
-Roses benefit from regular pruning and adequate air circulation.
+### Yellow Leaves
+Yellow leaves on roses can be associated with overwatering, poor drainage, nutrient deficiencies, pests, diseases, environmental stress, or natural aging. Examine the pattern of yellowing and the condition of the soil before deciding on a likely cause.
 
+### Pruning and Air Circulation
+Regular pruning and adequate air circulation help maintain healthy rose growth. Remove dead or damaged growth when appropriate, and avoid overcrowding plants.
 
-TOMATO PLANT CARE
-
-Tomato plants generally need plenty of sunlight and consistent
-watering.
-
-Avoid excessive watering because waterlogged soil can damage roots.
-
-Yellow leaves may be caused by overwatering, nutrient deficiencies,
-pests, diseases, or environmental stress.
-
-Good air circulation can help reduce some fungal disease problems.
+### Common Rose Care Questions
+- Why are my rose leaves turning yellow? Possible causes include watering problems, poor drainage, nutrient deficiencies, pests, diseases, and environmental stress.
+- How often should I water my rose? The frequency depends on soil moisture and environmental conditions. Check the soil before watering.
+- Does Green IQ specify an exact soil pH for roses? The current Green IQ knowledge does not specify an exact soil pH.
+- Does Green IQ recommend a particular fertilizer for roses? The current Green IQ knowledge does not identify a specific fertilizer or dosage.
 
 
-MONEY PLANT CARE
+## TOMATO PLANT CARE
 
-Money plants generally prefer bright indirect light but can tolerate
-lower-light conditions.
+### Soil and Drainage
+Tomato plants need soil that supports healthy root growth and drains excess water. Waterlogged soil can damage roots and contribute to plant stress.
 
-Allow the soil to partially dry between watering.
+### Sunlight
+Tomato plants generally need plenty of sunlight for healthy growth. Their requirements can vary with the variety, climate, and growing conditions.
 
-Excessive watering can cause root problems and yellow leaves.
+### Watering
+Tomato plants benefit from consistent watering appropriate to their growing conditions. Avoid excessive watering and waterlogged soil. Consider soil moisture, temperature, rainfall, and the plant's stage of growth when deciding when to water.
 
-Yellow leaves may be associated with overwatering, poor drainage,
-insufficient light, or natural aging.
+### Yellow Leaves
+Yellow leaves may be associated with overwatering, nutrient deficiencies, pests, diseases, or environmental stress. Check soil moisture and inspect the plant for visible symptoms before deciding on a cause.
 
+### Air Circulation
+Good air circulation can help reduce conditions that favor some fungal diseases. Avoid unnecessarily overcrowding tomato plants.
 
-SNAKE PLANT CARE
-
-Snake plants are generally tolerant of lower-light conditions.
-
-They should not be kept constantly waterlogged.
-
-Allow the soil to partially dry between watering.
-
-Overwatering can contribute to root problems.
-
-
-ALOE VERA CARE
-
-Aloe vera generally prefers bright light.
-
-Avoid keeping the soil continuously wet.
-
-Allow the soil to dry between watering.
-
-Overwatering can contribute to root problems.
+### Common Tomato Care Questions
+- Why are my tomato leaves yellow? Possible causes include watering problems, nutrient deficiencies, pests, diseases, and environmental stress.
+- Should I water my tomato plant every day? The current Green IQ knowledge does not prescribe a universal daily watering schedule.
+- Does Green IQ specify an exact fertilizer dosage for tomatoes? No specific fertilizer dosage is provided in the current knowledge.
 
 
-GENERAL PLANT CARE
+## MONEY PLANT CARE
 
-Plants need appropriate light, water, soil, nutrients, temperature,
-and air circulation for healthy growth.
+### Light
+Money plants generally prefer bright, indirect light and may tolerate lower-light conditions. Growth can vary depending on the amount and quality of available light.
 
-Overwatering is a common plant-care problem.
+### Watering
+Allow the soil to partially dry between watering. Check the soil before adding more water, and avoid keeping it constantly wet.
 
-Yellow leaves can have many possible causes, including watering
-problems, insufficient or excessive light, nutrient deficiencies,
-pests, diseases, environmental stress, or natural aging.
+### Yellow Leaves
+Yellow leaves may be associated with overwatering, poor drainage, insufficient light, natural aging, or other environmental stress. Check whether the soil remains wet and inspect the plant's growing conditions.
 
-Before diagnosing a plant problem, consider the plant species,
-watering schedule, soil condition, light exposure, temperature,
-humidity, and visible symptoms.
+### Root Problems
+Excessive watering and poor drainage can contribute to root problems. If the soil stays wet for long periods, review the pot's drainage and watering practices.
+
+### Common Money Plant Care Questions
+- How should I water my money plant? Allow the soil to partially dry between watering and avoid excessive moisture.
+- Why are my money plant leaves yellow? Possible causes include overwatering, poor drainage, insufficient light, and natural aging.
+- Can a money plant tolerate low light? It can tolerate lower-light conditions, although its growth may vary with available light.
 
 
-PLANT PESTS
+## SNAKE PLANT CARE
 
-Common plant pests include aphids, spider mites, mealybugs,
-whiteflies, and scale insects.
+### Light
+Snake plants are generally tolerant of lower-light conditions. Their growth can vary depending on light availability.
 
-Pests may cause yellowing, curling, spots, holes, sticky residue,
-or distorted leaves.
+### Watering
+Allow the soil to partially dry between watering. Snake plants should not be kept constantly waterlogged.
 
-When checking for pests, inspect both the upper and lower surfaces
-of leaves and examine new growth carefully.
+### Root Problems
+Overwatering can contribute to root problems. If the soil remains wet for a long time, check drainage and review watering practices.
+
+### Common Snake Plant Care Questions
+- How should I water a snake plant? Allow the soil to partially dry between watering.
+- Can a snake plant tolerate low light? Snake plants are generally tolerant of lower-light conditions.
+- Why might a snake plant have root problems? Overwatering and constantly waterlogged soil can contribute to root problems.
+
+
+## ALOE VERA CARE
+
+### Light
+Aloe vera generally prefers bright light. Its growth depends on available light and other growing conditions.
+
+### Watering
+Allow the soil to dry between watering. Avoid keeping the soil continuously wet.
+
+### Root Problems
+Overwatering can contribute to root problems. Review soil moisture and drainage if the soil remains wet for extended periods.
+
+### Common Aloe Vera Care Questions
+- How should I water aloe vera? Allow the soil to dry between watering and avoid continuously wet soil.
+- Does aloe vera need bright light? Aloe vera generally prefers bright light.
+- What can cause aloe vera root problems? Overwatering can contribute to root problems.
+
+
+## GENERAL PLANT CARE
+
+### Essential Growing Conditions
+Healthy plant growth depends on appropriate light, water, soil, nutrients, temperature, and air circulation. The ideal conditions differ between plant species and growing environments.
+
+### Watering Principles
+Watering needs depend on plant species, soil moisture, drainage, temperature, humidity, rainfall, light exposure, and growth conditions. Avoid using

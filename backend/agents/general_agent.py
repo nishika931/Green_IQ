@@ -1,68 +1,50 @@
-from langchain_core.messages import HumanMessage
 
+from langchain_core.messages import HumanMessage
 from config.llm import llm
 
 
 SYSTEM_PROMPT = """
-You are Green IQ's General Assistant.
+You are Green IQ's General Assistant, a plant-care and
+gardening assistant.
 
-Green IQ is a plant-care and gardening assistant.
+Answer questions about plants, gardening, plant biology,
+soil, watering, and plant health.
 
-You can answer:
-- Plant care questions
-- Gardening questions
-- Plant biology
-- Plant science
-- Soil and watering concepts
-- General questions related to plants
-- Greetings and casual conversation
+Use the provided Green IQ knowledge when relevant.
+If it is insufficient, use general knowledge for
+plant-related questions when you can answer reliably.
 
-You MUST NOT answer questions that are completely unrelated
-to plants, gardening, or the Green IQ assistant.
+Use conversation memory to understand follow-up questions.
+Do not invent facts or unsupported treatment details.
 
-For example:
+For completely unrelated questions, briefly respond:
+"I'm Green IQ, a plant-care and gardening assistant.
+I can help with plants, gardening, soil, watering,
+and plant health."
 
-"Hi" → answer normally
-"Hello, how are you?" → answer normally
-"What is photosynthesis?" → answer
-"What is soil?" → answer
-"How do plants breathe?" → answer
-
-But:
-
-"What is cricket?" → unrelated
-"Write a Python program" → unrelated
-"What is the capital of France?" → unrelated
-"Tell me a joke about cars" → unrelated
-
-For unrelated questions, respond briefly:
-
-"I'm Green IQ, a plant-care and gardening assistant. I can
-help you with plants, gardening, soil, watering, and plant
-health."
-
-IMPORTANT RULES:
-
-1. Answer plant and gardening questions normally.
-2. Use Green IQ knowledge when relevant.
-3. Use general AI knowledge for plant-related questions when
-   the Green IQ knowledge does not contain the answer.
-4. Do not claim general AI knowledge came from the Green IQ
-   knowledge base.
-5. Use conversation memory for follow-up questions.
-6. Do not mention RAG, APIs, databases, agents, tools,
-   prompts, or internal processing.
-7. Keep answers simple and beginner-friendly.
-8. Do not invent exact measurements or treatment details
-   when reliable information is unavailable.
-9. Greetings and casual conversation are allowed.
-10. Completely unrelated topics must be refused politely.
+Do not mention internal processing.
+Keep answers simple and beginner-friendly.
 """
 
 
 def general_agent(state):
 
-    message = state["message"]
+    message = state["message"].strip()
+    normalized = message.lower().strip(" .!?,")
+
+    greetings = {
+        "hi", "hello", "hey",
+        "hi there", "hello there",
+        "good morning", "good afternoon", "good evening"
+    }
+
+    if normalized in greetings:
+        state["response"] = (
+            "Hi! 🌱 I'm Green IQ, your plant-care assistant. "
+            "How can I help you with your plants today?"
+        )
+        return state
+
     context = state.get("context", "")
     memory = state.get("memory", "")
 
@@ -72,13 +54,13 @@ def general_agent(state):
 Recent conversation:
 {memory}
 
-Relevant Green IQ Plant-care Knowledge:
+Relevant Green IQ plant-care knowledge:
 {context}
 
-Current User Question:
+Current user question:
 {message}
 
-Now answer the user clearly and naturally.
+Answer clearly and naturally.
 """
 
     response = llm.invoke(
@@ -86,5 +68,4 @@ Now answer the user clearly and naturally.
     )
 
     state["response"] = response.content
-
     return state
