@@ -1,4 +1,3 @@
-
 from langchain_core.messages import HumanMessage
 
 from config.llm import llm
@@ -7,7 +6,6 @@ from tools.weather_tool import weather_tool
 
 
 def plant_detail_agent(state):
-
     message = state["message"]
     context = state.get("context", "")
     memory = state.get("memory", "")
@@ -23,7 +21,16 @@ def plant_detail_agent(state):
         except Exception as e:
             print(f"Plant information lookup failed: {e}")
 
-    watering_keywords = ["water", "watering", "irrigation","schedule","plan"]
+    watering_keywords = [
+        "water",
+        "watering",
+        "irrigation",
+        "schedule",
+        "rain",
+        "rainfall",
+        "weather",
+        "should i water",
+    ]
 
     needs_weather = any(
         keyword in message.lower()
@@ -33,61 +40,85 @@ def plant_detail_agent(state):
     if needs_weather and city:
         try:
             weather_data = weather_tool.invoke(city)
-            print("WATERING WEATHER DATA:", weather_data)
         except Exception as e:
             print(f"Weather tool error: {e}")
 
-    prompt = f"""
-You are Green IQ, a helpful plant-care assistant.
+   
+    if isinstance(context, str):
+        context = context.strip()
+    else:
+        context = ""
 
-CURRENT USER QUESTION:
+    print("\n========== PLANT KNOWLEDGE DEBUG ==========")
+    print("Question:", message)
+    print("Plant:", plant_name)
+    print("Retrieved context:", context or "EMPTY")
+    print("===========================================\n")
+
+    prompt = f"""
+You are Green IQ, a simple and reliable plant-care assistant.
+
+USER QUESTION:
 {message}
 
-PLANT NAME:
+IDENTIFIED PLANT:
 {plant_name or "Not identified"}
 
-RETRIEVED PLANT-CARE KNOWLEDGE:
-{context}
+GREEN IQ KNOWLEDGE:
+{context or "No relevant knowledge retrieved."}
 
 ADDITIONAL PLANT INFORMATION:
-{plant_data}
+{plant_data if plant_data else "Unavailable."}
+
+WEATHER DATA:
+{weather_data if weather_data else "Unavailable."}
 
 RECENT CONVERSATION:
-{memory}
-
-CURRENT WEATHER DATA:
-{weather_data}
+{memory or "Unavailable."}
 
 INSTRUCTIONS:
-1. Answer the user's exact question directly.
-2. Use retrieved Green IQ knowledge as the primary source
-   for plant-care information.
-3. Use additional plant information only when relevant.
-4. For watering questions, use weather data when available
-   alongside the plant's watering needs.
-5. Consider rainfall and relevant weather conditions, but do
-   not assume weather alone determines whether watering is needed.
-6. Never claim to know the actual soil moisture unless the
-   user provides that information.
-7. If weather data is unavailable, do not invent weather conditions.
-   Give useful general guidance instead.
-8. If the city is missing and current weather is needed, ask the
-   user for their city while still giving conditional advice.
-9. If Green IQ's knowledge does not specify a detail, you may
-   provide reliable general plant-care guidance without falsely
-   attributing it to Green IQ.
-10. Do not invent exact measurements or watering schedules and
-    present them as facts from Green IQ's knowledge.
-11. Use conversation memory to understand follow-up questions.
-12. Avoid unrelated advice and keep the answer beginner-friendly.
-13. Never mention internal processing, databases, or APIs.
 
-Answer the current question directly.
+1. First, check whether the Green IQ knowledge contains enough
+   information to answer the user's question.
+
+2. If the knowledge is sufficient, answer using ONLY the Green IQ
+   knowledge. Do not add any information from general LLM knowledge
+   or additional plant information.
+
+3. If the knowledge is partially sufficient, use the available
+   knowledge for the parts it answers. Use general LLM knowledge
+   ONLY to fill the genuinely missing information.
+
+4. If the knowledge is completely insufficient, answer using
+   reliable general LLM knowledge.
+
+5. Never change the meaning of the knowledge or invent additional
+   recommendations when the knowledge already answers the question.
+
+6. Do not repeat the same information in different words.
+
+7. Include only information relevant to the user's question.
+
+8. Use additional plant information and weather data only when
+   needed to fill missing information or answer a relevant
+   plant-specific or weather-related question.
+
+9. Use conversation history only to understand follow-up questions.
+
+10. If information is missing and you cannot answer reliably,
+    clearly acknowledge the limitation instead of guessing.
+
+11. Keep the answer simple, natural, and beginner-friendly.
+
+Return only the answer.
 """
 
-    response = llm.invoke([HumanMessage(content=prompt)])
+    response = llm.invoke([
+        HumanMessage(content=prompt)
+    ])
 
     result = dict(state)
+
     result["plant_name"] = plant_name
     result["plant_data"] = plant_data
     result["weather"] = weather_data

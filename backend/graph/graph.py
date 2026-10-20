@@ -8,27 +8,70 @@ from agents.plant_detail_agent import plant_detail_agent
 from agents.general_agent import general_agent
 from agents.weather_agent import weather_agent
 
-from ai.rag import retrieve_context
 
 
+import re
+from pathlib import Path
+
+
+
+def get_plant_context(message):
+    file_path = (
+        Path(__file__).resolve().parents[1]
+        / "knowledge"
+        / "plant_care.txt"
+    )
+
+    if not file_path.exists():
+        print("Knowledge file not found:", file_path)
+        return ""
+
+    text = file_path.read_text(encoding="utf-8")
+    sections = re.split(r"(?=^## )", text, flags=re.MULTILINE)
+
+    question = message.lower()
+
+    plant_aliases = {
+        "tomato": ["tomato", "tomatoes"],
+        "rose": ["rose", "roses"],
+        "money plant": ["money plant", "pothos"],
+        "snake plant": ["snake plant"],
+        "aloe vera": ["aloe vera", "aloe"],
+    }
+
+    for plant, aliases in plant_aliases.items():
+        if any(alias in question for alias in aliases):
+            for section in sections:
+                heading = section.strip().split("\n", 1)[0].lower()
+
+                if plant in heading and (
+                    "care" in heading
+                ):
+                    return section.strip()
+
+    for section in sections:
+        heading = section.strip().split("\n", 1)[0].lower()
+
+        if "general plant care" in heading:
+            return section.strip()
+
+    return ""
 
 
 def prepare_context(state: AgentState):
     memory = state.get("memory", "")
     message = state["message"]
 
-    context = retrieve_context(message, k=2)
+    context = get_plant_context(message)
 
-    print("\n===== FINAL RAG CONTEXT =====")
-    print(context)
-    print("=============================\n")
+    print("\n===== FINAL KNOWLEDGE CONTEXT =====")
+    print(context or "No matching section found")
+    print("===================================\n")
 
     return {
         "memory": memory,
         "context": context
     }
-
-
 
 
 def route(state: AgentState):

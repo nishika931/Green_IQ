@@ -3,108 +3,171 @@
 ## ROSE PLANT CARE
 
 ### Soil and Drainage
-Roses grow best in fertile, well-draining soil. Good drainage allows excess water to escape and helps prevent waterlogged soil. Soil that remains wet for long periods can contribute to root problems.
+Roses generally grow well in fertile, well-draining soil. A soil pH of approximately 6.0–6.5 is suitable for many garden roses, although preferences can vary by variety and growing conditions. Good drainage allows excess water to escape and helps prevent waterlogged soil. Soil that remains wet for long periods can contribute to root problems.
 
 ### Sunlight
-Roses generally benefit from several hours of direct sunlight each day. Their sunlight needs can vary depending on the rose variety, climate, and growing conditions.
+Many roses benefit from approximately 6 or more hours of direct sunlight daily. Actual sunlight needs vary depending on the rose variety, climate, temperature, and growing conditions. Some varieties tolerate partial shade.
 
 ### Watering
-Rose watering needs depend on soil moisture, temperature, humidity, rainfall, sunlight, and the plant's growing environment. Check soil moisture before watering instead of relying only on a fixed schedule. Avoid keeping the soil constantly waterlogged.
+Rose watering needs depend on soil moisture, temperature, humidity, rainfall, sunlight, soil type, and the plant's growing environment. Check soil moisture before watering instead of relying only on a fixed schedule. Water near the soil rather than repeatedly wetting the foliage when practical. Avoid keeping the soil constantly waterlogged. The exact amount and frequency depend on the plant and its environment.
 
 ### Yellow Leaves
 Yellow leaves on roses can be associated with overwatering, poor drainage, nutrient deficiencies, pests, diseases, environmental stress, or natural aging. Examine the pattern of yellowing and the condition of the soil before deciding on a likely cause.
 
 ### Pruning and Air Circulation
-Regular pruning and adequate air circulation help maintain healthy rose growth. Remove dead or damaged growth when appropriate, and avoid overcrowding plants.
+Regular pruning and adequate air circulation help maintain healthy rose growth. Remove dead or damaged growth when appropriate, and avoid overcrowding plants. The best pruning time depends on the rose type and local climate.
+
+### Fertilizer
+Rose nutrient needs depend on soil fertility, plant growth, and growing conditions. Soil testing can help identify nutrient deficiencies. Avoid applying fertilizer without considering the product label and the plant's needs. Green IQ does not prescribe a universal fertilizer dosage.
 
 ### Common Rose Care Questions
 - Why are my rose leaves turning yellow? Possible causes include watering problems, poor drainage, nutrient deficiencies, pests, diseases, and environmental stress.
 - How often should I water my rose? The frequency depends on soil moisture and environmental conditions. Check the soil before watering.
-- Does Green IQ specify an exact soil pH for roses? The current Green IQ knowledge does not specify an exact soil pH.
-- Does Green IQ recommend a particular fertilizer for roses? The current Green IQ knowledge does not identify a specific fertilizer or dosage.
+- What soil pH is suitable for roses? Approximately 6.0–6.5 is suitable for many garden roses.
+- Does Green IQ recommend a particular fertilizer or dosage? No universal fertilizer or dosage is prescribed.
 
 
 ## TOMATO PLANT CARE
 
 ### Soil and Drainage
-Tomato plants need soil that supports healthy root growth and drains excess water. Waterlogged soil can damage roots and contribute to plant stress.
+Tomato plants generally grow well in fertile, well-draining soil. A soil pH of approximately 6.0–6.8 is suitable for many tomatoes. Soil should support healthy root growth and allow excess water to drain. Waterlogged soil can damage roots and contribute to plant stress.
 
 ### Sunlight
-Tomato plants generally need plenty of sunlight for healthy growth. Their requirements can vary with the variety, climate, and growing conditions.
+Tomato plants generally benefit from around 6–8 hours of direct sunlight daily. Their requirements can vary with the variety, climate, temperature, and growing conditions. Excessive heat can affect flowering and fruit development.
 
 ### Watering
-Tomato plants benefit from consistent watering appropriate to their growing conditions. Avoid excessive watering and waterlogged soil. Consider soil moisture, temperature, rainfall, and the plant's stage of growth when deciding when to water.
+Tomato plants benefit from consistent watering appropriate to their growing conditions. Avoid excessive watering and waterlogged soil. Consider soil moisture, temperature, rainfall, soil type, container size, and the plant's stage of growth when deciding when to water. There is no universal daily watering schedule that applies to every tomato plant.
 
 ### Yellow Leaves
-Yellow leaves may be associated with overwatering, nutrient deficiencies, pests, diseases, or environmental stress. Check soil moisture and inspect the plant for visible symptoms before deciding on a cause.
+Yellow leaves may be associated with overwatering, nutrient deficiencies, pests, diseases, or environmental stress. Check soil moisture and inspect the plant for visible symptoms before deciding on a cause. Yellowing that begins on older leaves may have different causes from yellowing on new growth.
 
 ### Air Circulation
-Good air circulation can help reduce conditions that favor some fungal diseases. Avoid unnecessarily overcrowding tomato plants.
+Good air circulation can help reduce conditions that favor some fungal diseases. Avoid unnecessarily overcrowding tomato plants. Appropriate spacing depends on the variety and growing method.
+
+### Plant Spacing
+Tomato spacing varies by variety, growth habit, and whether the plants are grown in containers or in the ground. Follow the seed packet or plant label for recommended spacing. Allow enough room for plant growth and air circulation.
+
+### Fertilizer
+Tomato nutrient needs depend on soil fertility, growth stage, and growing conditions. Soil testing can help guide fertilizer selection. Follow the fertilizer product label and avoid assuming that all tomato plants need the same dosage.
 
 ### Common Tomato Care Questions
 - Why are my tomato leaves yellow? Possible causes include watering problems, nutrient deficiencies, pests, diseases, and environmental stress.
 - Should I water my tomato plant every day? The current Green IQ knowledge does not prescribe a universal daily watering schedule.
-- Does Green IQ specify an exact fertilizer dosage for tomatoes? No specific fertilizer dosage is provided in the current knowledge.
+- What soil pH is suitable for tomatoes? Approximately 6.0–6.8 is suitable for many tomato plants.
+- How much fertilizer should I use? The dosage depends on the product, soil conditions, and plant needs. Follow the product label.
 
 
 ## MONEY PLANT CARE
 
 ### Light
-Money plants generally prefer bright, indirect light and may tolerate lower-light conditions. Growth can vary depending on the amount and quality of available light.
+Money plants, commonly referring to pothos (Epipremnum aureum), generally prefer bright, indirect light and can tolerate lower-light conditions. Growth can vary depending on the amount and quality of available light. Strong direct sunlight can scorch leaves, particularly when a plant is not acclimated to it.
 
 ### Watering
-Allow the soil to partially dry between watering. Check the soil before adding more water, and avoid keeping it constantly wet.
+Allow the soil to partially dry between watering. Check the soil before adding more water, and avoid keeping it constantly wet. Watering frequency varies with light, temperature, humidity, pot size, soil type, and drainage. Do not follow a fixed schedule without checking the soil.
 
 ### Yellow Leaves
 Yellow leaves may be associated with overwatering, poor drainage, insufficient light, natural aging, or other environmental stress. Check whether the soil remains wet and inspect the plant's growing conditions.
 
 ### Root Problems
-Excessive watering and poor drainage can contribute to root problems. If the soil stays wet for long periods, review the pot's drainage and watering practices.
+Excessive watering and poor drainage can contribute to root problems. If the soil stays wet for long periods, review the pot's drainage and watering practices. A drainage hole helps excess water escape.
+
+### Temperature
+Money plant growth depends partly on temperature and environmental conditions. Avoid sudden temperature changes and exposure to cold conditions that may stress the plant.
 
 ### Common Money Plant Care Questions
 - How should I water my money plant? Allow the soil to partially dry between watering and avoid excessive moisture.
 - Why are my money plant leaves yellow? Possible causes include overwatering, poor drainage, insufficient light, and natural aging.
-- Can a money plant tolerate low light? It can tolerate lower-light conditions, although its growth may vary with available light.
+- Can a money plant tolerate low light? It can tolerate lower-light conditions, although growth may be slower.
+- Should I water my money plant every day? Not necessarily. Check soil moisture and consider the growing environment.
 
 
 ## SNAKE PLANT CARE
 
 ### Light
-Snake plants are generally tolerant of lower-light conditions. Their growth can vary depending on light availability.
+Snake plants (Dracaena trifasciata, formerly Sansevieria trifasciata) are generally tolerant of lower-light conditions. They can also grow in brighter indirect light. Growth depends on light availability and other growing conditions.
 
 ### Watering
-Allow the soil to partially dry between watering. Snake plants should not be kept constantly waterlogged.
+Allow the soil to dry substantially between watering. Snake plants should not be kept constantly waterlogged. Watering frequency varies with temperature, light, pot size, soil type, and drainage. Check soil moisture before watering instead of relying on a fixed schedule.
+
+### Soil and Drainage
+Snake plants benefit from well-draining soil. Soil that retains excessive moisture for long periods can increase the risk of root problems. Containers should have adequate drainage.
 
 ### Root Problems
 Overwatering can contribute to root problems. If the soil remains wet for a long time, check drainage and review watering practices.
 
+### Yellow Leaves
+Yellow leaves can be associated with overwatering, poor drainage, environmental stress, or natural aging. Examine soil moisture and the condition of the plant before deciding on a cause.
+
 ### Common Snake Plant Care Questions
-- How should I water a snake plant? Allow the soil to partially dry between watering.
+- How should I water a snake plant? Allow the soil to dry substantially between watering.
 - Can a snake plant tolerate low light? Snake plants are generally tolerant of lower-light conditions.
 - Why might a snake plant have root problems? Overwatering and constantly waterlogged soil can contribute to root problems.
+- Should I water a snake plant every day? Daily watering is not a universal requirement. Check the soil and growing conditions.
 
 
 ## ALOE VERA CARE
 
 ### Light
-Aloe vera generally prefers bright light. Its growth depends on available light and other growing conditions.
+Aloe vera generally prefers bright light and can grow well in a sunny location when appropriately acclimated. Light requirements depend on indoor or outdoor placement and growing conditions. Sudden changes in sunlight may stress the plant.
 
 ### Watering
-Allow the soil to dry between watering. Avoid keeping the soil continuously wet.
+Allow the soil to dry between watering. Avoid keeping the soil continuously wet. Watering frequency varies with temperature, sunlight, soil type, pot size, and drainage. Check the soil before watering rather than following a rigid schedule.
+
+### Soil and Drainage
+Aloe vera benefits from well-draining soil, such as a suitable cactus or succulent potting mix. Containers should have drainage holes. Soil that remains wet for extended periods can increase the risk of root problems.
 
 ### Root Problems
-Overwatering can contribute to root problems. Review soil moisture and drainage if the soil remains wet for extended periods.
+Overwatering and poor drainage can contribute to root problems. Review soil moisture and drainage if the soil remains wet for extended periods.
+
+### Yellow or Soft Leaves
+Yellowing or soft leaves can be associated with excess moisture, poor drainage, environmental stress, or natural aging. Inspect the soil and plant before deciding on a likely cause.
 
 ### Common Aloe Vera Care Questions
 - How should I water aloe vera? Allow the soil to dry between watering and avoid continuously wet soil.
 - Does aloe vera need bright light? Aloe vera generally prefers bright light.
-- What can cause aloe vera root problems? Overwatering can contribute to root problems.
+- What can cause aloe vera root problems? Overwatering and poor drainage can contribute to root problems.
+- Should I water aloe vera every day? Daily watering is not a universal requirement. Check soil moisture and growing conditions.
 
 
 ## GENERAL PLANT CARE
 
 ### Essential Growing Conditions
-Healthy plant growth depends on appropriate light, water, soil, nutrients, temperature, and air circulation. The ideal conditions differ between plant species and growing environments.
+Healthy plant growth depends on appropriate light, water, soil, nutrients, temperature, and air circulation. The ideal conditions differ between plant species, varieties, and growing environments. Recommendations for one plant should not automatically be applied to another.
 
 ### Watering Principles
-Watering needs depend on plant species, soil moisture, drainage, temperature, humidity, rainfall, light exposure, and growth conditions. Avoid using
+Watering needs depend on plant species, soil moisture, drainage, temperature, humidity, rainfall, light exposure, pot size, and growth conditions. Check soil moisture before watering. Avoid excessive watering and prolonged waterlogged conditions when the plant requires well-draining soil. Some plants need the soil to dry more thoroughly than others.
+
+### Soil and Drainage
+Soil should provide suitable support, moisture retention, air circulation around roots, and drainage for the particular plant. A soil mix suitable for a succulent may not be suitable for a moisture-loving plant. Containers should have drainage appropriate to the plant's needs.
+
+### Soil pH
+Soil pH affects nutrient availability and plant growth. Suitable pH varies by species. Use plant-specific guidance or a soil test rather than assuming that all plants require the same pH.
+
+### Light
+Light needs vary by plant species. Some plants prefer direct sunlight, some prefer bright indirect light, and others tolerate lower-light conditions. Consider the intensity, duration, and location of available light.
+
+### Temperature and Humidity
+Temperature and humidity affect plant growth, water use, and stress. Suitable conditions differ by species. Avoid applying one universal temperature or humidity range to every plant.
+
+### Nutrients and Fertilizer
+Nutrient requirements depend on plant species, growth stage, soil fertility, and growing conditions. Soil testing can help identify deficiencies. Select fertilizer according to plant needs and follow the product label. Do not assume one fertilizer or dosage is appropriate for all plants.
+
+### Yellow Leaves
+Yellow leaves can have multiple causes, including watering problems, poor drainage, nutrient deficiencies, pests, diseases, environmental stress, and natural aging. Examine soil moisture, light, visible symptoms, and recent changes in growing conditions before deciding on a likely cause.
+
+### Pests and Diseases
+Pests and diseases can affect leaves, stems, roots, and overall plant growth. Inspect the plant for visible symptoms before choosing a treatment. Avoid diagnosing a specific pest or disease from yellow leaves alone.
+
+### Air Circulation
+Adequate air circulation can help reduce conditions that favor some fungal diseases. Avoid unnecessary overcrowding while providing light and space appropriate to the plant.
+
+### Using Measurements Responsibly
+Numerical recommendations such as soil pH, sunlight hours, temperature, humidity, plant spacing, and fertilizer dosage are guidelines that depend on the species and growing environment. Use reliable plant-specific information when exact values are needed. Do not invent measurements when the knowledge base does not specify them.
+
+### General Questions
+- Should I water every plant daily? No. Watering frequency depends on the plant and its growing conditions.
+- Do all plants need direct sunlight? No. Light requirements vary by species.
+- Do all plants need the same soil pH? No. Suitable soil pH varies by plant.
+- Can yellow leaves identify a specific problem? Not by themselves. Several conditions can cause yellowing.
+- Should I use the same fertilizer for every plant? No. Nutrient requirements vary by plant and growing conditions.
+- What should I do when plant-specific information is unavailable? Identify the plant and its growing conditions, consult reliable plant-specific guidance, and avoid assuming that another plant's requirements are identical.
